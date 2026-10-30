@@ -1,4 +1,3 @@
-
 function Education() {
   const educationList = [
     {
@@ -20,9 +19,22 @@ function Education() {
   const courses = [
     {
       id: 1,
+      icon: "💼",
+      title: "Full Stack Developer Intern",
+      institution: "VCodez Innovation — Chennai, Tamil Nadu",
+      duration: "Feb 2025 - May 2025",
+      description:
+        "Built and styled responsive web pages with HTML, CSS, and JavaScript, and worked within a full stack development workflow, completing assigned frontend tasks on schedule alongside the training team.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    },
+    {
+      id: 2,
+      icon: "💻",
       title: "Java Full Stack Development",
-      institution: "QSpiders Institute",
-      location: "Chennai, Tamil Nadu",
+      institution: "QSpiders, Vadapalani — Chennai, Tamil Nadu",
+      duration: "Nov 2025 - Sep 2026",
+      description:
+        "Completed training in full-stack application development, covering Java backend technologies, databases, and frontend development.",
       technologies: [
         "Core Java",
         "Spring Boot",
@@ -42,8 +54,8 @@ function Education() {
         <p className="section-subtitle">MY LEARNING JOURNEY</p>
         <h2>Education & Training</h2>
         <p className="education-intro">
-          My academic background and professional training in Java Full Stack
-          Development.
+          My academic background, internship experience, and professional
+          training in Java Full Stack Development.
         </p>
       </div>
 
@@ -53,15 +65,11 @@ function Education() {
             <div className="education-icon">🎓</div>
 
             <div className="education-details">
-              <span className="education-duration">
-                {education.duration}
-              </span>
+              <span className="education-duration">{education.duration}</span>
 
               <h3>{education.degree}</h3>
 
-              <p className="education-institution">
-                {education.institution}
-              </p>
+              <p className="education-institution">{education.institution}</p>
 
               <p className="education-result">{education.result}</p>
             </div>
@@ -70,24 +78,20 @@ function Education() {
       </div>
 
       <div className="training-section">
-        <h3 className="training-heading">Professional Training</h3>
+        <h3 className="training-heading">Internship & Professional Training</h3>
 
         {courses.map((course) => (
           <div className="training-card" key={course.id}>
-            <div className="training-icon">💻</div>
+            <div className="training-icon">{course.icon}</div>
 
             <div className="training-details">
+              <span className="education-duration">{course.duration}</span>
+
               <h4>{course.title}</h4>
 
-              <p className="training-institution">
-                {course.institution} — {course.location}
-              </p>
+              <p className="training-institution">{course.institution}</p>
 
-              <p className="training-description">
-                Completed training in full-stack application development,
-                covering Java backend technologies, databases, and frontend
-                development.
-              </p>
+              <p className="training-description">{course.description}</p>
 
               <div className="training-technologies">
                 {course.technologies.map((technology) => (

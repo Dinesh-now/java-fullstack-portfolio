@@ -2,20 +2,21 @@ function Projects() {
   const projects = [
     {
       id: 1,
+      icon: "🏦",
       title: "Banking Application",
       status: "Completed",
       description:
-        "Developed a full-stack banking application using Java, Spring Boot, React.js, and MySQL. Implemented CRUD operations for user and account management, deposit and withdrawal functionality, and transaction history tracking. Designed REST APIs with input validation and exception handling. Implemented pagination and JWT-based authentication as part of the application development.",
+        "A full-stack banking application built with Java, Spring Boot, React.js, and MySQL. Developed 25+ REST APIs with full CRUD for users, accounts, transactions, and loans, secured with Spring Security and JWT authentication. Implemented deposit, withdraw, and transfer with balance validation, paginated transaction history, a loan workflow, DTOs, validation, and global exception handling. Tested with Postman, JUnit, and Mockito, with a React frontend of 8 screens connected through Axios.",
 
       technologies: [
         "Java",
         "Spring Boot",
-        "React.js",
-        "MySQL",
-        "Hibernate",
-        "REST APIs",
+        "Spring Security",
         "JWT",
-        "Git",
+        "Hibernate",
+        "MySQL",
+        "React.js",
+        "Axios",
       ],
 
       github: "https://github.com/Dinesh-now/Banking-Application-Full-Stack",
@@ -23,10 +24,32 @@ function Projects() {
 
     {
       id: 2,
+      icon: "⚖️",
+      title: "Child Support Enforcement Portal (CSES)",
+      status: "Completed",
+      description:
+        "A React.js web portal for a Child Support Enforcement System. Built the user interface with reusable, component-based architecture, implemented page navigation with React Router, and managed state and data flow using React hooks to deliver a clean and responsive experience.",
+
+      technologies: [
+        "React.js",
+        "React Router",
+        "React Hooks",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+      ],
+
+      // Add your CSES repository link here and the GitHub button will appear.
+        github: "https://github.com/Dinesh-now/cses_portal",
+    },
+
+    {
+      id: 3,
+      icon: "🛒",
       title: "E-commerce Web Application",
       status: "In Progress",
       description:
-        "Currently developing a full-stack E-commerce web application using Java, Spring Boot, React.js, and MySQL. The application includes product listing and management, user login, shopping cart functionality, product search and filtering, and order management. Implementing product CRUD operations, order placement, and order history to provide a smooth online shopping experience.",
+        "A full-stack E-commerce web application using Java, Spring Boot, React.js, and MySQL. Includes product listing and management, user login, shopping cart, product search and filtering, order placement, and order history, with the React frontend connected to the Spring Boot backend through REST APIs.",
 
       technologies: [
         "Java",
@@ -46,13 +69,13 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="projects-header">
-        <p className="section-subtitle">MY WORK</p>
+        <p className="section-subtitle">My Work</p>
 
         <h2>Featured Projects</h2>
 
         <p className="project-intro">
-          Explore my projects and the technologies I use to build
-          practical web applications.
+          Explore my projects and the technologies I use to build practical
+          web applications.
         </p>
       </div>
 
@@ -60,15 +83,11 @@ function Projects() {
         {projects.map((project) => (
           <div className="project-card" key={project.id}>
             <div className="project-card-header">
-              <div className="project-icon">
-                {project.id === 1 ? "🏦" : "🛒"}
-              </div>
+              <div className="project-icon">{project.icon}</div>
 
               <span
                 className={`project-status ${
-                  project.status === "Completed"
-                    ? "completed"
-                    : "in-progress"
+                  project.status === "Completed" ? "completed" : "in-progress"
                 }`}
               >
                 {project.status}
@@ -77,16 +96,11 @@ function Projects() {
 
             <h3>{project.title}</h3>
 
-            <p className="project-description">
-              {project.description}
-            </p>
+            <p className="project-description">{project.description}</p>
 
             <div className="project-technologies">
               {project.technologies.map((technology) => (
-                <span
-                  className="technology-tag"
-                  key={technology}
-                >
+                <span className="technology-tag" key={technology}>
                   {technology}
                 </span>
               ))}

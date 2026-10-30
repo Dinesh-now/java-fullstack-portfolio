@@ -12,9 +12,9 @@ function Contact() {
         <h2>Contact Me</h2>
 
         <p className="contact-intro">
-          I'm looking for opportunities to start my career as a Java Full Stack
-          Developer. If you have an opportunity or would like to connect, feel
-          free to contact me.
+          I'm looking for my first full-time role as a Java Developer, Backend
+          Developer, or Full Stack Developer. If you have an opportunity or
+          would like to connect, feel free to contact me.
         </p>
       </div>
 
@@ -71,14 +71,23 @@ function Contact() {
 
         <p>I'd be happy to hear from you!</p>
 
-        <a href={`mailto:${email}`} className="contact-button">
-          Contact Me
-        </a>
+        <div className="contact-bottom-buttons">
+          <a href={`mailto:${email}`} className="contact-button">
+            Contact Me
+          </a>
+          <a
+            href="/resume/Dinesh_Resume.2026.pdf"
+            download="Dinesh_K_Resume.pdf"
+            className="contact-button contact-button-outline"
+          >
+            Download Resume
+          </a>
+        </div>
       </div>
 
       <footer className="portfolio-footer">
         <p>
-          © {new Date().getFullYear()} Dinesh. Built with React.js.
+          © {new Date().getFullYear()} Dinesh K. Built with React.js.
         </p>
       </footer>
     </section>
