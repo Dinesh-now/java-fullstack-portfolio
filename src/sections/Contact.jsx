@@ -76,7 +76,7 @@ function Contact() {
             Contact Me
           </a>
           <a
-            href="/resume/Dinesh_Resume.2026.pdf"
+            href="/resume/Dinesh_Resume_2026.pdf"
             download="Dinesh_K_Resume.pdf"
             className="contact-button contact-button-outline"
           >
