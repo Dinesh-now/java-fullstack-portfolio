@@ -26,6 +26,7 @@ function Home() {
             <li key={tag}>{tag}</li>
           ))}
         </ul>
+        
 
         <div className="home-buttons">
           <a href="#projects" className="btn primary-btn">

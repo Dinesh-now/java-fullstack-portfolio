@@ -75,6 +75,7 @@ function Contact() {
           <a href={`mailto:${email}`} className="contact-button">
             Contact Me
           </a>
+          
           <a
             href="/resume/Dinesh_Resume_2026.pdf"
             download="Dinesh_K_Resume.pdf"
